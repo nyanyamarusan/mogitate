@@ -1,0 +1,229 @@
+.content {
+    margin: 0 auto;
+    padding: 70px 40px;
+    background: #f8f8f8;
+    font-family: Hiragino Kaku Gothic Pro;
+    font-weight: 300;
+    color: #4b4b4b;
+    font-size: 14px;
+}
+
+.content__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.content__title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.jump-button {
+    padding: 13px 20px;
+    background: #ffa929;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jump-button:hover {
+    background: #df9425;
+}
+
+.register {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+.content__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.search-form {
+    width: 18%;
+}
+
+.search-form__input {
+    width: 100%;
+    height: 50px;
+    padding: 14.5px 10px;
+    border: 1px solid #e0dfde;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.search-form__input::placeholder {
+    color: #e0dfde;
+}
+
+.search-form__button {
+    width: 100%;
+    height: 44px;
+    background: #f5c800;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.search-form__button:hover {
+    background: #ddb400;
+}
+
+.sort-info__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 40px;
+}
+
+.sort-info {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0dfde;
+    width: 100%;
+    position: relative;
+}
+
+.sort-info__select {
+    height: 43px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0dfde;
+    padding: 11px 10px;
+    appearance: none;
+}
+
+.sort-info::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 40%;
+    transform: translateY(-50%) scaleX(1.6);
+    color: #beb1a6;
+    font-size: 8px;
+    pointer-events: none;
+}
+
+.sort-info:has(.sort-info__select:focus)::after {
+    content: "▲";
+}
+
+.sort-info__option {
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border: 1px solid #e0dfde;
+    width: 100%;
+}
+
+.sort-info__line {
+    color: #e0dfde;
+    font-size: 1px;
+    width: 100%;
+}
+
+.tag {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 21px;
+    border: 1px solid #f5c800;
+    width: 130px;
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.tag__remove {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #f5c800;
+    padding: 5px;
+    color: #f5c800;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+.product-list {
+    width: 80%;
+}
+
+.product-list__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.product-list__item {
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.product-list__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-list__image {
+    width: 100%;
+}
+
+.product-list__info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-list__name,
+.product-list__price {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    width: 30px;
+    height: 30px;
+    color: inherit;
+}
+
+.pagination-link.active {
+    background: #f5c800;
+    color: #ffffff;
+}
