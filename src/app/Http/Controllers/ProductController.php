@@ -23,8 +23,10 @@ class ProductController extends Controller
         $sortDirection = $request->input('sort_direction', 'desc');
         $products = Product::with('seasons');
         if ($request->isMethod('POST')) {
-            $products = $products->keywordSearch($keyword)
-                ->orderBy('price', $sortDirection);
+            $products = $products->keywordSearch($keyword);
+            if (in_array($sortDirection, ['asc', 'desc'])) {
+                $products = $products->orderBy('price', $sortDirection);
+            }
         }
         if ($request->isMethod('GET')) {
             $keyword = '';

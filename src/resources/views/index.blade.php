@@ -28,7 +28,7 @@
             </h3>
             <div class="sort-info">
                 <select name="sort_direction" class="sort-info__select">
-                    <option value="" class="sort-info__placeholder" disabled selected hidden>価格で並べ替え</option>
+                    <option value="" class="sort-info__placeholder" selected hidden>価格で並べ替え</option>
                     <option value="desc" class="sort-info__option">高い順に表示</option>
                     <hr class="sort-info__line">
                     <option value="asc" class="sort-info__option">安い順に表示</option>
