@@ -19,7 +19,14 @@
                 @if (!$errors->any())
                 <img class="update__image" src="{{ asset('storage/fruits-img/'. $product->image) }}" alt="{{ $product['name'] }}">
                 @endif
-                <input type="file" name="image" class="update-form__image-input">
+                <div class="update-form__image-container">
+                    <input type="file" name="image"  id="file" class="update-form__image-input">
+                    <label for="file" class="update-form__image-label">ファイルを選択</label>
+                    @if ($product->image)
+                    <span class="image-name">{{ basename($product->image) }}</span>
+                    @endif
+                </div>
+                
                 @error('image')
                 <p class="error">{{ $message }}</p>
                 @enderror

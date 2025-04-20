@@ -25,15 +25,20 @@
         @error('price')
         <p class="error">{{ $message }}</p>
         @enderror
+        <div class="label-item">
+            <label for="name" class="label">商品画像</label>
+            <span class="required">必須</span>
+        </div>
         <div class="create-form__image">
             @if (!empty($product->image))
             <img class="create__image" src="{{ asset('storage/fruits-img/'. $product->image) }}">
             @endif
-            <input type="file" name="image" class="create-form__image-input">
-            @error('image')
-            <p class="error">{{ $message }}</p>
-            @enderror
+            <input type="file" name="image" id="file" class="create-form__image-input">
+            <label for="file" class="create-form__image-label">ファイルを選択</label>
         </div>
+        @error('image')
+        <p class="error">{{ $message }}</p>
+        @enderror
         <div class="label-item">
             <label for="season" class="label">季節</label>
             <span class="required">必須</span>
